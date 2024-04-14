@@ -1,0 +1,15 @@
+CUDA_VISIBLE_DEVICES=0 python train-t5-hf-email.py \
+	--model_name_or_path t5-small \
+	--data_path data/email_training_data.json \
+	--output_dir t5-small-email \
+	--num_train_epochs 10 \
+	--per_device_train_batch_size 1 \
+    --per_device_eval_batch_size 1 \
+    --evaluation_strategy "no" \
+    --save_strategy "epoch" \
+	--save_total_limit 10 \
+    --learning_rate 1e-4 \
+    --weight_decay 0. \
+    --warmup_ratio 0. \
+	--lr_scheduler_type "cosine" \
+	--save_safetensors

@@ -11,7 +11,7 @@ The project is **Leveraging Machine Learning Models for Efficient email classifi
 After comparing the 4 different models listed above, we found out that the T5-small model performs best and would be using that model for future unseen data. We have come up with a python script as a demonstration for our overall project.
 
 # Working Demo
-1) Download and run (classify-email-chat-mode.py)[classify-email-chat-mode.py] python script
+1) Download and run [classify-email-chat-mode.py](classify-email-chat-mode.py) python script
 2) Input "Your email subject" and "Your email content" respectively
 3) Model will output the email's label accordingly, whether it is classified as "Personal", "Marketing" or "Updates"
 

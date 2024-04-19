@@ -9,8 +9,6 @@ import json
 from transformers import GenerationConfig, T5ForConditionalGeneration, T5Tokenizer
 from typing import Optional
 
-import sys
-
 
 @dataclass
 class ModelArguments:

@@ -11,11 +11,6 @@ from transformers import GenerationConfig, T5Tokenizer, T5ForConditionalGenerati
 from typing import Dict, Optional, Sequence
 
 
-DEFAULT_PAD_TOKEN = "[PAD]"
-DEFAULT_EOS_TOKEN = "</s>"
-DEFAULT_BOS_TOKEN = "<s>"
-DEFAULT_UNK_TOKEN = "<unk>"
-
 
 @dataclass
 class ModelArguments:

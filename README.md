@@ -8,6 +8,13 @@ The project is **Leveraging Machine Learning Models for Efficient email classifi
 - [BERT Model](BERTModel.ipynb)
 - [Naive Bayes Model](NaiveBayesModel.ipynb)
 
+After comparing the 4 different models listed above, we found out that the T5-small model performs best and would be using that model for future unseen data. We have come up with a python script as a demonstration for our overall project.
+
+# Working Demo
+1) Download and run (classify-email-chat-mode.py)[classify-email-chat-mode.py] python script
+2) Input "Your email subject" and "Your email content" respectively
+3) Model will output the email's label accordingly, whether it is classified as "Personal", "Marketing" or "Updates"
+
 # Exploratory Data Analysis
 ## Overview
 The data_exploration.ipynb python notebook contains the code which our team has used to generate the descriptive statistics and data visualisations used in our EDA.

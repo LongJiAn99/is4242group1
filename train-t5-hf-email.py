@@ -2,6 +2,7 @@ import os
 import json
 import random
 import numpy as np
+import io
 
 import torch
 from torch.utils.data import Dataset

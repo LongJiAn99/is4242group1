@@ -61,12 +61,20 @@ The python notebook should generate the following:
 
 # T5-Small Model
 ## Overview
+The train-t5-hf-email.py python file contains the code which our team has used to run a T5-small Model on our training dataset.
 
 ## Prerequisites
+Before using this script, ensure that you have the following python packages installed:
+- json
+- transformers
+- torch
+- numpy
 
 ## Usage
+Run finetune.sh file to start training. You can modify the hyperparameters in the file to seek for better performance.
 
 ## Output
+Run answer-email.py to use the trained model to generate answers for the testing dataset.
 
 # BERT Model
 ## Overview

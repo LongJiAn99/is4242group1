@@ -1,23 +1,15 @@
-import os, sys, gc
+import os
 import json
 import random
 import numpy as np
-import argparse
-import logging
-from tqdm import tqdm
 
 import torch
-from torch.utils.data import Dataset, DataLoader
-from torch.nn.utils import clip_grad_norm_
+from torch.utils.data import Dataset
 
-import utils
-
-from datasets import load_dataset
 from dataclasses import dataclass, field
-from typing import Dict, Optional, Sequence
+from typing import Dict, Optional
 from transformers import (
     T5Tokenizer, T5ForConditionalGeneration,
-    AutoConfig, get_linear_schedule_with_warmup,
     Trainer
 )
 import transformers
@@ -34,10 +26,24 @@ def set_seed(seed):
     os.environ['PYTHONHASHSEED'] = str(seed)
 
 
+def _make_r_io_base(f, mode: str):
+    if not isinstance(f, io.IOBase):
+        f = open(f, mode=mode)
+    return f
+
+
+def jload(f, mode="r"):
+    """Load a .json file into a dictionary."""
+    f = _make_r_io_base(f, mode)
+    jdict = json.load(f)
+    f.close()
+    return jdict
+
+
 class ConditionalGenerationDataset(Dataset):
 
     def __init__(self, data_path):
-        list_data_dict = utils.jload(data_path)
+        list_data_dict = jload(data_path)
         self.inputs = []
         self.labels = []
 

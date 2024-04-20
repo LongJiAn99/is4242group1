@@ -85,12 +85,26 @@ Run answer-email.py to use the trained model to generate answers for the testing
 
 # BERT Model
 ## Overview
+The BERTModel.ipynb file contains the code which our tea has used to train a BERT model on our training dataset.
 
 ## Prerequisites
-
+- json
+- string
+- nltk
+- scikit-learn
+- transformers
+- torch
 ## Usage
+Follow these steps to use the python notebook:
+
+1. Choose an appropriate python kernel.
+2. Ensure that the email_training_data.json, email_testing_data.json and emaildata.json files are in the same root directory as the python notebook.
+3. Run the notebook sequentially cell by cell as written.
 
 ## Output
+The python notebook should generate the following:
+- Accuracy of the model
+- Accuracy of the model with train/test/validation split
 
 # Naive Bayes Model
 ## Overview

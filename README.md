@@ -94,9 +94,24 @@ Run answer-email.py to use the trained model to generate answers for the testing
 
 # Naive Bayes Model
 ## Overview
+The NaiveBayesModel.ipynb python notebook contains the code which our team has used to run a Naive Bayes Model.
 
 ## Prerequisites
+Before using this script, ensure that you have the following python packages installed:
+- json
+- re
+- string
+- nltk
+- scikit-learn
 
 ## Usage
+Follow these steps to use the python notebook:
+
+1. Choose an appropriate python kernel.
+2. Ensure that the email_training_data.json, email_testing_data.json and emaildata.json files are in the same root directory as the python notebook.
+3. Run the notebook sequentially cell by cell as written.
 
 ## Output
+The python notebook should generate the following:
+- Accuracy of the model
+- Accuracy of the model with train/test/validation split
